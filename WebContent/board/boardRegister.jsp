@@ -42,7 +42,7 @@
 		alert("등록되었습니다.");
 	</script>
 	<%
-		response.sendRedirect("index.jsp?page=boardList");
+		response.sendRedirect("index.jsp?page=board/boardList.jsp");
 		conn.close();
 		pstmt.close();
 	%>

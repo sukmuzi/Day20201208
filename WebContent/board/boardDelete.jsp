@@ -25,7 +25,7 @@
 	%>
 	<%=no%> 게시물이 삭제되었습니다.
 	<%
-		response.sendRedirect("index.jsp?page=boardList");
+		response.sendRedirect("index.jsp?page=board/boardList");
 	%>
 </body>
 </html>

@@ -7,12 +7,12 @@
 /* body { */
 /* 	background-image: url(images/back.jpg); */
 /* } */
-
 #boardWrite {
-/* 	position: absolute; */
-/* 	top: 250px; */
-/* 	left: 600px; */
-/* 	color: white; */
+	/* 	position: absolute; */
+	/* 	top: 250px; */
+	/* 	left: 600px; */
+	/* 	color: white; */
+	
 }
 
 ul {
@@ -48,9 +48,9 @@ ul {
 		<form action="boardRegister.jsp" method="get">
 			<input type="hidden" name="readcount" value="0">
 			<ul>
-				<li><label for="제목">제목</label> <input
-					type="text" name="title" autofocus="autofocus" required="required"
-					placeholder="제목을입력하세요" size="50" maxlength="100"></li>
+				<li><label for="제목">제목</label> <input type="text" name="title"
+					autofocus="autofocus" required="required" placeholder="제목을입력하세요"
+					size="50" maxlength="100"></li>
 
 				<li><label for="내용" class="content1">내용</label> <textarea
 						rows="20" cols="80" name="content" placeholder="내용을입력해주세요"
