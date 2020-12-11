@@ -25,7 +25,7 @@
 		<form action="boardSearch.jsp" method="get">
 			<ul>
 				<li><input type="hidden" name="boardTest"
-					value="index.jsp?page=board/boardSearchForm"></li>
+					value="index.jsp?page=boardSearchForm"></li>
 				<li><label for="제목">제목</label><input type="text" name="title"
 					autofocus="autofocus" required="required" placeholder="제목입력"></li>
 				<li><input type="image" src="images/search.png" class="kh01"></li>
@@ -63,8 +63,8 @@
 		</table>
 	</div>
 	<div>
-		<a href="index.jsp?page=board/boardList">목록</a> 
-		<a href="index.jsp?page=board/boardWrite">글쓰기</a>
+		<a href="index.jsp?page=boardList">목록</a> 
+		<a href="index.jsp?page=boardWrite">글쓰기</a>
 	</div>
 </body>
 </html>

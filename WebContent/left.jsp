@@ -63,7 +63,7 @@ ul#leftmenu .daegu6 a {
 <body>
 	<ul id="leftmenu">
 		<li class="daegu1"><a href="index.jsp?page=haksaInfo">학사관리</a></li>
-		<li class="daegu2"><a href="index.jsp?page=board/boardList">커뮤니티</a></li>
+		<li class="daegu2"><a href="index.jsp?page=boardList">커뮤니티</a></li>
 		<li class="daegu3"><a href="">컴퓨터공학과</a></li>
 		<li class="daegu4"><a href="">행정학과</a></li>
 		<li class="daegu5"><a href="">국어국문학과</a></li>

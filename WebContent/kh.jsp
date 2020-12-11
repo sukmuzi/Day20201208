@@ -7,16 +7,6 @@
 <script src="js/jquery.innerfade.js"></script>
 
 <style type="text/css">
-body {
-	background-image: url(images/back01.jpg);
-}
-
-/* #mainpage { */
-/* 	position: absolute; */
-/* 	top: 300px; */
-/* 	left: 650px; */
-/* } */
-
 .khb {
 	width: 600px;
 	height: 400px;

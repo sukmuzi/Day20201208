@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>대구가톨릭대학교</title>
+<title></title>
 <script src="js/jquery-1.10.2.js"></script>
 <script src="js/jquery.innerfade.js"></script>
 <style>
@@ -85,11 +85,20 @@ body {
 	/*border:1px solid red;*/
 	font-size: 20px;
 }
-a{
+
+a {
 	text-decoration: none;
 }
+
 a:hover {
 	text-decoration: underline;
+}
+
+#idlogin {
+	position: absolute;
+	top: 130px;
+	font-size: 15px;
+/* 	left: -30px; */
 }
 </style>
 </head>
@@ -102,14 +111,31 @@ a:hover {
 		<div class="menu">
 			<ul>
 				<li><a href="index.jsp?page=haksaInfo">학사관리</a></li>
-				<li><a href="index.jsp?page=board/boardList">커뮤니티</a></li>
+				<li><a href="index.jsp?page=boardList">커뮤니티</a></li>
 				<li><a href="#">모집과정</a></li>
 				<li><a href="#">KHBCLASS</a></li>
 				<li><a href="#">포트폴리오</a></li>
 			</ul>
 		</div>
 		<div id="homeregister">
-			<a href="#">홈|</a> <a href="#">회원가입|</a> <a href="#">로그인</a>
+			<a href="#">홈|</a> <a href="index.jsp?page=memberForm">회원가입|</a>
+
+			<%
+				String id = (String) session.getAttribute("id");
+				if (id != null) {
+					out.print("<a href='logout.jsp'>로그아웃|</a>");
+					out.print("<a href='index.jsp?page=memberList'>회원목록</a>");
+				} else {
+					out.print("<a href='index.jsp?page=loginForm'>로그인</a>");
+				}
+			%>
+			<div id="idlogin">
+				<%
+					if (id != null) {
+						out.print(id + "님 환영합니다.");
+					}
+				%>
+			</div>
 		</div>
 	</div>
 	<!-- 실시간 검색어 -->

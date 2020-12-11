@@ -7,44 +7,35 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>게시판</title>
+<title>게시글 수정</title>
 </head>
 <body>
 	<%
+		String no1 = request.getParameter("no");
+		int no = Integer.parseInt(no1);
 		String title = request.getParameter("title");
 		String content = request.getParameter("content");
 		String author = request.getParameter("author");
 		String nal = request.getParameter("nal");
 		String readcount = request.getParameter("readcount");
-	%>
-	제목:<%=title%>
-	내용:<%=content%>
-	작성자:<%=author%>
-	날짜:<%=nal%>
-	조회수:<%=readcount%>
-	<%
+		String searchTitle = request.getParameter("searchTitle");
+		
 		Class.forName("com.mysql.jdbc.Driver");
 		Connection conn = DriverManager.getConnection("jdbc:mysql://bbr123.cafe24.com:3306/bbr123", "bbr123",
 				"alstjr95!");
-
-		String sql = "insert into boardsuk(title, content, author, nal, readcount) values(?, ?, ?, ?, ?)";
+		
+		String sql = "update boardsuk set title = ?, content = ?, author = ?, nal = ? where title = ?";
 		PreparedStatement pstmt = conn.prepareStatement(sql);
 		pstmt.setString(1, title);
 		pstmt.setString(2, content);
 		pstmt.setString(3, author);
 		pstmt.setString(4, nal);
-		pstmt.setString(5, readcount);
-
+		pstmt.setString(5, searchTitle);
+		
 		int cnt = pstmt.executeUpdate();
-	%><br>
-	<%=cnt%>건 등록완료.
-	<script type="text/javascript">
-		alert("등록되었습니다.");
-	</script>
+	%>
 	<%
-		response.sendRedirect("index.jsp?page=board/boardList.jsp");
-		conn.close();
-		pstmt.close();
+		response.sendRedirect("index.jsp?page=boardList");
 	%>
 </body>
 </html>

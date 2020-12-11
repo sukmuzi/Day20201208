@@ -6,10 +6,6 @@
 <script src="js/jquery-1.10.2.js"></script>
 <script src="js/jquery.effects.core.js"></script>
 <style>
-* {
-	margin: 0;
-	padding: 0;
-}
 
 .title {
 	font-family: "궁서", Arial, Dotum, Helvetica, AppleGothic, Sans-serif;
